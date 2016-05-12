@@ -1,0 +1,24 @@
+<h2>Add game</h2>
+<form *ngIf="active" (ngSubmit)="onSubmit()" #gameForm="ngForm">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input [(ngModel)]="game.title" ngControl="title" #title="ngForm" type="text" class="form-control" placeholder="Required" required />
+    <div [hidden]="title.valid || title.pristine" class="alert alert-danger">Title is required.</div>
+  </div>
+  <div class="form-group">
+    <label for="url">Url</label>
+    <input [(ngModel)]="game.url" ngControl="url" #url="ngForm" type="text" class="form-control" placeholder="Required </app/imgs/dog_01-09.jpg>" required />
+    <div [hidden]="url.valid || url.pristine" class="alert alert-danger">Url is required.</div>
+  </div>
+  <div class="form-group">
+    <label for="note">Note</label>
+    <textarea [(ngModel)]="game.note" type="text" class="form-control" placeholder="Optional"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="type">Type</label>
+    <select [(ngModel)]="game.type" class="form-control">
+      <option *ngFor="#type of types">{{type}}</option>
+    </select>
+  </div>
+  <button [disabled]="!gameForm.form.valid" type="submit" class="btn btn-default">Save</button>
+</form>

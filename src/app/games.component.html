@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-3">
+    <h2>Game list</h2>
+    <ul class="games">
+      <li *ngFor="#game of games" [class.selected]="game === selectedGame" (click)="onSelect(game)">
+	<span class="badge">{{game.id}}</span> {{game.title}}
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-9" *ngIf="selectedGame">
+    <h2>{{selectedGame.title}}</h2>
+    <img [src]="selectedGame.url" />
+  </div>
+</div>
