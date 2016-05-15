@@ -4,7 +4,7 @@ This is a prcatice in Angular2(beta) which simulates a single page application -
 ##Features
 Independent components for easy testing and future maintenance<br/>
 Route to update content instead of redirecting or reloading the page
-##Install
+##Installation
 1. Install [node and npm](https://nodejs.org/en/download/) if not already on your machine.
 2. Download all the files in "src" and put them in an empty directory (keep the same structure).
 3. In the Terminal, "cd" into the root directory that contains all the files. Type `npm install` and then wait for the installation to finish. Note: There will be warnings along the way but it is fine. (by Angular2)
