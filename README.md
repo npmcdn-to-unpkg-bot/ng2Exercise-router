@@ -12,7 +12,7 @@ Route to update content instead of redirecting or reloading the page
 5. Type `npm run lite`. The lite server will open the web applicaiton in a browser.
 6. Manage games through the UI.
 
-##What you can do?
+##What you can do
 1. Check all the games.
 2. Select each game to get more details.
 3. Add new games.
